@@ -10,6 +10,7 @@ COPY ./api /app
 # Instala as dependências do projeto
 RUN pip install --no-cache-dir -r /app/requirements.txt
 RUN python -m nltk.downloader punkt stopwords wordnet
+RUN chmod +x app.py
 
 # Expõe a porta que será usada pelo aplicativo Flask
 EXPOSE 80
