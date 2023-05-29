@@ -1,5 +1,4 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
-from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 import pickle
 from nltk.tokenize import word_tokenize

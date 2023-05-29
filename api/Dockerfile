@@ -8,10 +8,8 @@ WORKDIR /app
 COPY . /app
 
 # Instala as dependências do projeto
-RUN pip install -r requirements.txt
-RUN python -m nltk.downloader punkt
-RUN python -m nltk.downloader stopwords
-RUN python -m nltk.downloader wordnet
+RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m nltk.downloader punkt stopwords wordnet
 
 # Expõe a porta que será usada pelo aplicativo Flask
 EXPOSE 80
