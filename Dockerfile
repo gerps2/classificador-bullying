@@ -5,10 +5,10 @@ FROM python:3.9
 WORKDIR /app
 
 # Copia os arquivos do projeto para o diretório de trabalho
-COPY . /app
+COPY ./api /app
 
 # Instala as dependências do projeto
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
 RUN python -m nltk.downloader punkt stopwords wordnet
 
 # Expõe a porta que será usada pelo aplicativo Flask
